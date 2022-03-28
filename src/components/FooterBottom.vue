@@ -66,6 +66,12 @@ export default {
             @include d-flex;
             align-items: center;
 
+            h4{
+                text-transform: uppercase;
+                color: $secondaryColor;
+                font-weight: bold;
+            }
+
             a {
                 margin-left: 1rem;
             }
