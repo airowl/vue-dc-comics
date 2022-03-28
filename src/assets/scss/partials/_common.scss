@@ -8,10 +8,18 @@
 }
 
 @mixin container {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 
 @mixin d-flex {
     display: flex;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
 }

@@ -46,7 +46,6 @@ export default {
             justify-content: center;
 
             li{
-                list-style-type: none;
                 margin-left: 2rem;
                 height: 100%;
                 @include d-flex;
@@ -59,7 +58,6 @@ export default {
                 }
 
                 a{
-                    text-decoration: none;
                     color: $fontColor;
                     text-transform: uppercase;
                     font-size: .8rem;
