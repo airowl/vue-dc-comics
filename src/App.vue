@@ -7,6 +7,7 @@
       <div>
       <h2>Content goes here...</h2>
       </div>
+      <MainBottom />
     </main>
 
     <footer>
@@ -22,13 +23,15 @@
 import Header from './components/Header.vue'
 import FooterTop from './components/FooterTop.vue'
 import FooterBottom from './components/FooterBottom.vue'
+import MainBottom from './components/MainBottom.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
     FooterTop,
-    FooterBottom
+    FooterBottom,
+    MainBottom
   }
 }
 </script>
@@ -42,7 +45,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 
   main{
-    height: 10vh;
     background-color: black;
     color: white;
 
