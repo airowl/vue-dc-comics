@@ -35,7 +35,6 @@ export default {
     justify-content: space-between;
     align-items: center;
     height: 15vh;
-    border: 1px solid red;
 
     nav.header-nav{
         
