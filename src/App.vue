@@ -4,7 +4,9 @@
     <Header />
 
     <main>
-
+      <div>
+      <h2>Content goes here...</h2>
+      </div>
     </main>
 
     <Footer />
@@ -31,7 +33,16 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+  main{
+    height: 10vh;
+    background-color: black;
+    color: white;
+
+    div{
+      @include container;
+      padding: 1.5rem 0;
+    }
+  }
 }
 </style>
