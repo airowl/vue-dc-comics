@@ -3,6 +3,7 @@ node_modules
 /dist
 */._*
 ._*
+src/assets/dc-comics-empty-layout.png
 
 
 # local env files
