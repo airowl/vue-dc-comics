@@ -107,7 +107,7 @@ export default {
 
 #main-content{
     text-align: center;
-    padding: 1.5rem 0;
+    
 
     #jumbotron{
         height: 23rem;
@@ -150,6 +150,7 @@ export default {
         text-transform: uppercase;
         font-weight: bold;
         background-color: $secondaryColor;
+        margin-bottom: 1.5rem;
     }
 
 }

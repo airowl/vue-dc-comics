@@ -2,34 +2,10 @@
     <div id="main-bottom">
         <div class="container">
             <ul>
-                <li>
-                    <a href="#">
-                        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                        <p>Digital Comics</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../assets/img/buy-comics-merchandise.png" alt="">
-                        <p>Dc merchandise</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-                        <p>Subsription</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../assets/img/buy-comics-shop-locator.png" alt="">
-                        <p>Comic Shop Locator</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../assets/img/buy-dc-power-visa.svg" alt="">
-                        <p>Dc Power Visa</p>
+                <li v-for="(element, index) in mainBottomLinks" :key="index">
+                    <a :href="element.url">
+                        <img :src="require('../assets/img/' + element.image)" alt="">
+                        <p>{{element.text}}</p>
                     </a>
                 </li>
             </ul>
@@ -42,33 +18,33 @@ export default {
     name: 'mainBottom',
     data: function() {
         return {
-            //mainBottomLinks: [
-            //    {
-            //        text: 'Digital Comics',
-            //        url: '#',
-            //        image: '../assets/img/buy-comics-digital-comics.png'
-            //    },
-            //    {
-            //        text: 'Digital Comics',
-            //        url: '#',
-            //        image: '../assets/img/buy-comics-digital-comics.png'
-            //    },
-            //    {
-            //        text: 'Digital Comics',
-            //        url: '#',
-            //        image: '../assets/img/buy-comics-digital-comics.png'
-            //    },
-            //    {
-            //        text: 'Digital Comics',
-            //        url: '#',
-            //        image: '../assets/img/buy-comics-digital-comics.png'
-            //    },
-            //    {
-            //        text: 'Digital Comics',
-            //        url: '#',
-            //        image: '../assets/img/buy-comics-digital-comics.png'
-            //    }
-            //]
+            mainBottomLinks: [
+                {
+                    text: 'Digital Comics',
+                    url: '#',
+                    image: 'buy-comics-digital-comics.png'
+                },
+                {
+                    text: 'Merchandise',
+                    url: '#',
+                    image: 'buy-comics-merchandise.png'
+                },
+                {
+                    text: 'Shop Locator',
+                    url: '#',
+                    image: 'buy-comics-shop-locator.png'
+                },
+                {
+                    text: 'Subscriptions',
+                    url: '#',
+                    image: 'buy-comics-subscriptions.png'
+                },
+                {
+                    text: 'Power Visa',
+                    url: '#',
+                    image: 'buy-dc-power-visa.svg'
+                }
+            ]
         }
     }
 }
@@ -89,6 +65,7 @@ export default {
             @include d-flex;
             justify-content: space-evenly;
             align-items: center;
+            padding: 2rem 0;
 
             li a{
                 @include d-flex;
