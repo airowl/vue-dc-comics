@@ -4,9 +4,7 @@
     <Header />
 
     <main>
-      <div>
-      <h2>Content goes here...</h2>
-      </div>
+      <MainContent />
       <MainBottom />
     </main>
 
@@ -24,6 +22,7 @@ import Header from './components/Header.vue'
 import FooterTop from './components/FooterTop.vue'
 import FooterBottom from './components/FooterBottom.vue'
 import MainBottom from './components/MainBottom.vue'
+import MainContent from './components/MainContent.vue'
 
 export default {
   name: 'App',
@@ -31,7 +30,8 @@ export default {
     Header,
     FooterTop,
     FooterBottom,
-    MainBottom
+    MainBottom,
+    MainContent
   }
 }
 </script>
@@ -48,10 +48,6 @@ export default {
     background-color: black;
     color: white;
 
-    div{
-      @include container;
-      padding: 1.5rem 0;
-    }
   }
 
   footer{
