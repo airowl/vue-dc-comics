@@ -55,7 +55,7 @@ export default {
   }
 
   footer{
-    height: 40vh;
+    //height: 40vh;
     color: white;
   }
 }

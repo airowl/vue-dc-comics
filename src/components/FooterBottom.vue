@@ -8,20 +8,8 @@
             </div>
             <div class="social-icons">
                 <h4>Follow us</h4>
-                <a href="#">
-                    <img src="../assets/img/footer-facebook.png" alt="Facebook Logo">
-                </a>
-                <a href="#">
-                    <img src="../assets/img/footer-twitter.png" alt="Twitter Logo">
-                </a>
-                <a href="#">
-                    <img src="../assets/img/footer-youtube.png" alt="Youtube Logo">
-                </a>
-                <a href="#">
-                    <img src="../assets/img/footer-pinterest.png" alt="Pinterest Logo">
-                </a>
-                <a href="#">
-                    <img src="../assets/img/footer-periscope.png" alt="Periscope Logo">
+                <a href="#" v-for="(element, index) in iconLinks" :key="index">
+                    <img :src="require('../assets/img/' + element.image)" alt="Facebook Logo">
                 </a>
             </div>
         </div>
@@ -31,7 +19,33 @@
 
 <script>
 export default {
-    name: 'FooterBottom'
+    name: 'FooterBottom',
+    data: function(){
+        return {
+            iconLinks: [
+                {
+                    image: 'footer-facebook.png',
+                    url: '#'
+                },
+                {
+                    image: 'footer-twitter.png',
+                    url: '#'
+                },
+                {
+                    image: 'footer-youtube.png',
+                    url: '#'
+                },
+                {
+                    image: 'footer-pinterest.png',
+                    url: '#'
+                },
+                {
+                    image: 'footer-periscope.png',
+                    url: '#'
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -42,6 +56,7 @@ export default {
 #footer-bottom{
     height: calc(100% - 80%);
     background-color: #303030;
+    padding: 1rem 0;
 
     div.container{
         @include container;

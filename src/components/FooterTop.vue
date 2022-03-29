@@ -200,7 +200,7 @@ export default {
 @import "../assets/scss/style.scss";
 
 #footer-top{
-    height: 80%;
+    height: 18rem;
     background-image: url(../assets/img/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -235,7 +235,6 @@ export default {
                     }
                 }
             }
-
             
         }
 
