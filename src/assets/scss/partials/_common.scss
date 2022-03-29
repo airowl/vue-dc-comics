@@ -12,8 +12,10 @@
     margin: 0 auto;
 }
 
-@mixin d-flex {
+@mixin d-flex($justify, $align) {
     display: flex;
+    justify-content: $justify;
+    align-items: $align;
 }
 
 li{

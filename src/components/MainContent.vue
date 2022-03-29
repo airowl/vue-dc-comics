@@ -117,18 +117,15 @@ export default {
 
     div.album{
         @include container;
-        @include d-flex;
+        @include d-flex(space-evenly, '');
         flex-wrap: wrap;
-        justify-content: space-evenly;
         gap: 2rem 0;
         position: relative;
         padding: 3rem 0;
 
         &::before{
             content: 'Current series';
-            @include d-flex;
-            justify-content: center;
-            align-items: center;
+            @include d-flex(center, center);
             position: absolute;
             text-transform: uppercase;
             font-weight: bold;

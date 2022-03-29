@@ -62,14 +62,12 @@ export default {
         @include container;
 
         ul{
-            @include d-flex;
-            justify-content: space-evenly;
+            @include d-flex(space-evenly, '');
             align-items: center;
             padding: 2rem 0;
 
             li a{
-                @include d-flex;
-                align-items: center;
+                @include d-flex('', center);
                 color: white;
 
                 img{

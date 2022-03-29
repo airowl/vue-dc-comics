@@ -81,9 +81,7 @@ export default {
 
 #header{
     @include container;
-    @include d-flex;
-    justify-content: space-between;
-    align-items: center;
+    @include d-flex(space-between, center);
     height: 15vh;
 
     nav.header-nav{
@@ -92,14 +90,12 @@ export default {
 
         ul{
             height: 100%;
-            @include d-flex;
-            justify-content: center;
+            @include d-flex(center, '');
 
             li{
                 margin-left: 2rem;
                 height: 100%;
-                @include d-flex;
-                align-items: center;
+                @include d-flex('', center);
                 border-bottom: 4px solid transparent;
 
                 &.active,

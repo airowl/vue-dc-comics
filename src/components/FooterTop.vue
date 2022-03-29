@@ -207,14 +207,13 @@ export default {
 
     div.footer-top-content{
         @include container;
-        @include d-flex;
-        justify-content: space-between;
+        @include d-flex(space-between, '');
         height: 100%;
 
         &-links{
             width: 50%;
             padding: 1rem 0;
-            @include d-flex;
+            @include d-flex('', '');
 
             .col:nth-child(2){
                 margin: 0  2rem;

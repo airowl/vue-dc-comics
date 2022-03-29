@@ -60,9 +60,7 @@ export default {
 
     div.container{
         @include container;
-        @include d-flex;
-        justify-content: space-between;
-        align-items: center;
+        @include d-flex(space-between, center);
         height: 100%;
 
         .sing-up{
@@ -78,8 +76,7 @@ export default {
         }
 
         .social-icons{
-            @include d-flex;
-            align-items: center;
+            @include d-flex('', center);
 
             h4{
                 text-transform: uppercase;
