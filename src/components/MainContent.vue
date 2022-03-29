@@ -1,21 +1,26 @@
 <template>
-    <div>
+    <div id="main-content">
         <div id="jumbotron">
         </div>
         <div class="album">
-            <div class="album-card" v-for="(element, index) in albumCards" :key="index">
-                <div class="album-image">
-                    <img :src="element.thumb" :alt="element.series">
-                </div>
-                <h4>{{element.series}}</h4>
-            </div>
+            <AlbumCard 
+            v-for="(element, index) in albumCards" 
+            :key="index"
+            :singleCard="element"
+            />
         </div>
+        <a href="#" class="load-more">load more</a>
     </div>
 </template>
 
 <script>
+import AlbumCard from "./AlbumCard.vue";
+
 export default {
     name: 'mainContent',
+    components: {
+        AlbumCard
+    },
     data: function(){
         return {
             albumCards: [
@@ -100,6 +105,10 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/style.scss";
 
+#main-content{
+    text-align: center;
+    padding: 1.5rem 0;
+
     #jumbotron{
         height: 23rem;
         background-image: url('../assets/img/jumbotron.jpg');
@@ -111,26 +120,9 @@ export default {
         @include d-flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        gap: 2rem 0;
         position: relative;
-        padding: 4rem 0;
-
-        div.album-card{
-            width: calc((100% / 6) - 1rem);
-            
-            h4{
-                margin:  1rem 0;
-            }
-
-            div.album-image{
-                width: 100%;
-                height: 10rem;
-                overflow: hidden;
-
-                img{
-                    width: 100%;
-                }
-            }
-        }
+        padding: 3rem 0;
 
         &::before{
             content: 'Current series';
@@ -147,7 +139,19 @@ export default {
             height: 4rem;
             background-color: $secondaryColor;
         }
-
     }
+
+    a{
+        display: inline-block;
+        width: 14rem;
+        height: 3rem;
+        line-height: 3rem;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: $secondaryColor;
+    }
+
+}
 
 </style>
