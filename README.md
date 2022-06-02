@@ -1,5 +1,7 @@
 # vue-dc-comics
 
+Preview live: https://vue-dc-comics.netlify.app/
+
 ## Project setup
 ```
 npm install
